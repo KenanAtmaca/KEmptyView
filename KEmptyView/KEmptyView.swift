@@ -28,7 +28,7 @@ open class KEmptyView: UIView {
     
     private var imageView:UIImageView = {
         let image = UIImageView()
-        image.contentMode = UIView.ContentMode.scaleAspectFit
+        image.contentMode = UIView.ContentMode.scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -44,9 +44,7 @@ open class KEmptyView: UIView {
     private var actionButton:UIButton = {
         let button = UIButton()
         button.setTitle("Button", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Helvatica", size: 15)
-        button.tintColor = .black
+        button.imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
         return button
@@ -92,8 +90,13 @@ open class KEmptyView: UIView {
         self.backgroundColor = emptyBackgroundColor ?? UIColor.white
         self.frame = frontViewFrame ?? CGRect()
         
-        imageView.widthAnchor.constraint(equalToConstant: 128).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 128).isActive = true
+        if let frontSize = frontViewFrame {
+            imageView.widthAnchor.constraint(equalToConstant: frontSize.width * 0.5).isActive = true
+            imageView.heightAnchor.constraint(equalToConstant: frontSize.height * 0.5).isActive = true
+        } else {
+            imageView.widthAnchor.constraint(equalToConstant: 128).isActive = true
+            imageView.heightAnchor.constraint(equalToConstant: 128).isActive = true
+        }
         
         self.addSubview(container)
         container.axis = .vertical
@@ -101,7 +104,7 @@ open class KEmptyView: UIView {
         container.alignment = .center
         container.spacing = containerSpacing
         container.translatesAutoresizingMaskIntoConstraints = false
-        if isImageShow { container.addArrangedSubview(imageView) }
+        if isImageShow && imageView.image != nil { container.addArrangedSubview(imageView) }
         if isTitleShow { container.addArrangedSubview(titleLabel) }
         
         if isActionButtonShow {
@@ -168,8 +171,9 @@ open class KEmptyView: UIView {
         }
     }
     
-    open func setButtonCustomize(title:String?,image:UIImage? = nil, backgroundColor:UIColor? = nil, font:UIFont? = nil, overlay:Bool? = false) {
+    open func setButtonCustomize(title:String?,titleColor:UIColor,image:UIImage? = nil, backgroundColor:UIColor? = nil, font:UIFont? = nil, overlay:Bool? = false) {
         actionButton.setTitle(title, for: .normal)
+        actionButton.setTitleColor(titleColor, for: .normal)
         if let img = image {
             actionButton.setImage(img, for: .normal)
         }

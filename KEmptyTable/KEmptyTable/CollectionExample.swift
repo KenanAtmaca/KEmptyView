@@ -22,11 +22,11 @@ class CollectionExample: UIViewController {
         emptyView.isTapScreen = true
         emptyView.isActionButtonShow = false
         emptyView.screenTapAction = {
-            print("zaaaaa")
+            print("Bam!")
         }
+        
         testCollection.emptyView = emptyView
         testCollection.reloadEmptyAnimation()
-
     }
 }
 

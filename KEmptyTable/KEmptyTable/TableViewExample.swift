@@ -17,22 +17,28 @@ class TableViewExample: UIViewController {
         super.viewDidLoad()
         
         let emptyView = KEmptyView()
-        emptyView.setImageCustomize(image: UIImage(named: "cloud1")!)
-        emptyView.setTitleCustomize(title: "Oooops :(")
+        emptyView.emptyBackgroundColor = .white
+        emptyView.setImageCustomize(image: UIImage(named: "empty")!)
+        emptyView.setTitleCustomize(title: "There were no results", textColor: .gray, font: UIFont(name: "Futura", size: 19))
+        emptyView.setButtonCustomize(title: nil, titleColor: .black, image: UIImage(named: "reload"), backgroundColor: nil, font: UIFont(name: "Helvatica", size: 16), overlay: nil)
         emptyView.position = .center
         emptyView.animationDuration = 0.7
         emptyView.animation = .scale
         emptyView.isImageShow = true
         emptyView.isTitleShow = true
         emptyView.isTapScreen = true
+        emptyView.isActionButtonShow = true
         emptyView.screenTapAction = {
-            print("Bom!")
+            print("Tap Tap!")
         }
         emptyView.buttonAction = {
             print("Reload!")
         }
+        
         testTable.emptyView = emptyView
-        testTable.reloadEmptyAnimation()
+        
+        testTable.reloadEmpty() // non-animated use
+        testTable.reloadEmptyAnimation() // if you are going to use animated
     }
 }
 
@@ -43,7 +49,7 @@ extension TableViewExample: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "KEmptyView"
+        cell.textLabel?.text = " >> KEmptyView << "
         return cell
     }
     
