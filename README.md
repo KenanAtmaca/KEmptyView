@@ -58,5 +58,7 @@ end
         tableView.reloadEmptyAnimation() // if you are going to use animated
 ```
 
+See the 'KTableView' sample project for more.
+
 ## License
 Usage is provided under the [MIT License](http://http//opensource.org/licenses/mit-license.php). See LICENSE for the full details.
