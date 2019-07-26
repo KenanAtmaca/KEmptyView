@@ -1,0 +1,16 @@
+PODS:
+  - KEmptyView (1.0.1)
+
+DEPENDENCIES:
+  - KEmptyView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KEmptyView
+
+SPEC CHECKSUMS:
+  KEmptyView: 8bacfd3e399ef55018425f5f34e4a387fe6e84b3
+
+PODFILE CHECKSUM: 07f8566d9e0ba4e362ee809ce8cc84f239e7ab94
+
+COCOAPODS: 1.7.5

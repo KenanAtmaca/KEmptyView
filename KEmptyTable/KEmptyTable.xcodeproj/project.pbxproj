@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,7 @@
 		6ED1415722E71E44001E58AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1415522E71E44001E58AC /* Main.storyboard */; };
 		6ED1415922E71E47001E58AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1415822E71E47001E58AC /* Assets.xcassets */; };
 		6ED1415C22E71E47001E58AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6ED1415A22E71E47001E58AC /* LaunchScreen.storyboard */; };
-		6EE9B97B22E9A871000A20B8 /* KEmptyView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9B97922E9A86C000A20B8 /* KEmptyView.framework */; };
-		6EE9B97C22E9A871000A20B8 /* KEmptyView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6EE9B97922E9A86C000A20B8 /* KEmptyView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D579DEF69965BDC94C0BE321 /* Pods_KEmptyTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B45F1484F8DE2607099996 /* Pods_KEmptyTable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6EE9B97C22E9A871000A20B8 /* KEmptyView.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -32,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E5B2D60DE29ADE504CB21B9 /* Pods-KEmptyTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KEmptyTable.release.xcconfig"; path = "Target Support Files/Pods-KEmptyTable/Pods-KEmptyTable.release.xcconfig"; sourceTree = "<group>"; };
+		27B45F1484F8DE2607099996 /* Pods_KEmptyTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KEmptyTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E41B6D822E88CB900C489E4 /* CollectionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExample.swift; sourceTree = "<group>"; };
 		6ED1414E22E71E44001E58AC /* KEmptyTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KEmptyTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED1415122E71E44001E58AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		6ED1415822E71E47001E58AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6ED1415B22E71E47001E58AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6ED1415D22E71E47001E58AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EE9B97922E9A86C000A20B8 /* KEmptyView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KEmptyView.framework; sourceTree = "<group>"; };
+		E11158FA355967192FFCA9AB /* Pods-KEmptyTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KEmptyTable.debug.xcconfig"; path = "Target Support Files/Pods-KEmptyTable/Pods-KEmptyTable.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,19 +48,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EE9B97B22E9A871000A20B8 /* KEmptyView.framework in Frameworks */,
+				D579DEF69965BDC94C0BE321 /* Pods_KEmptyTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0947439B6AFBA3D1C5DFAB71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27B45F1484F8DE2607099996 /* Pods_KEmptyTable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		46C06D2B14D327583DEB373E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E11158FA355967192FFCA9AB /* Pods-KEmptyTable.debug.xcconfig */,
+				0E5B2D60DE29ADE504CB21B9 /* Pods-KEmptyTable.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6ED1414522E71E43001E58AC = {
 			isa = PBXGroup;
 			children = (
-				6EE9B97922E9A86C000A20B8 /* KEmptyView.framework */,
 				6ED1415022E71E44001E58AC /* KEmptyTable */,
 				6ED1414F22E71E44001E58AC /* Products */,
+				46C06D2B14D327583DEB373E /* Pods */,
+				0947439B6AFBA3D1C5DFAB71 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,10 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ED1416022E71E47001E58AC /* Build configuration list for PBXNativeTarget "KEmptyTable" */;
 			buildPhases = (
+				E0D45CC018A37302093B6E7B /* [CP] Check Pods Manifest.lock */,
 				6ED1414A22E71E44001E58AC /* Sources */,
 				6ED1414B22E71E44001E58AC /* Frameworks */,
 				6ED1414C22E71E44001E58AC /* Resources */,
 				6EE9B97D22E9A871000A20B8 /* Embed Frameworks */,
+				54F4BD0B9E2287292A528ADB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +172,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54F4BD0B9E2287292A528ADB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KEmptyTable/Pods-KEmptyTable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KEmptyTable/Pods-KEmptyTable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KEmptyTable/Pods-KEmptyTable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0D45CC018A37302093B6E7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KEmptyTable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6ED1414A22E71E44001E58AC /* Sources */ = {
@@ -237,7 +299,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -292,7 +354,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -304,6 +366,7 @@
 		};
 		6ED1416122E71E47001E58AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E11158FA355967192FFCA9AB /* Pods-KEmptyTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +376,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = KEmptyTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,6 +390,7 @@
 		};
 		6ED1416222E71E47001E58AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E5B2D60DE29ADE504CB21B9 /* Pods-KEmptyTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +400,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = KEmptyTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
