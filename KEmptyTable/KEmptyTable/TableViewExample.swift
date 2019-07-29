@@ -17,8 +17,7 @@ class TableViewExample: UIViewController {
         super.viewDidLoad()
         
         let emptyView = KEmptyView()
-        emptyView.emptyBackgroundColor = .white
-        emptyView.setImageCustomize(image: UIImage(named: "empty")!)
+        emptyView.setImageCustomize(image: UIImage(named: "empty") ?? UIImage())
         emptyView.setTitleCustomize(title: "There were no results", textColor: .gray, font: UIFont(name: "Futura", size: 19))
         emptyView.setButtonCustomize(title: nil, titleColor: .black, image: UIImage(named: "reload"), backgroundColor: nil, font: UIFont(name: "Helvatica", size: 16), overlay: nil)
         emptyView.position = .center
@@ -28,6 +27,7 @@ class TableViewExample: UIViewController {
         emptyView.isTitleShow = true
         emptyView.isTapScreen = true
         emptyView.isActionButtonShow = true
+        
         emptyView.screenTapAction = {
             print("Tap Tap!")
         }
@@ -36,9 +36,10 @@ class TableViewExample: UIViewController {
         }
         
         testTable.emptyView = emptyView
+        emptyView.setImageSize(size: .large)
         
         testTable.reloadEmpty() // non-animated use
-        testTable.reloadEmptyAnimation() // if you are going to use animated
+      //testTable.reloadEmptyAnimation() // if you are going to use animated
     }
 }
 

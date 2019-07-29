@@ -26,6 +26,12 @@ open class KEmptyView: UIView {
         case top
     }
     
+    public enum ImageSize {
+        case small
+        case medium
+        case large
+    }
+    
     private var imageView:UIImageView = {
         let image = UIImageView()
         image.contentMode = UIView.ContentMode.scaleAspectFill
@@ -51,6 +57,8 @@ open class KEmptyView: UIView {
     }()
     
     private var container = UIStackView()
+    private var imageW = NSLayoutConstraint()
+    private var imageH = NSLayoutConstraint()
     
     var frontViewFrame:CGRect? {
         didSet {
@@ -89,15 +97,10 @@ open class KEmptyView: UIView {
     private func setupLayouts() {
         self.backgroundColor = emptyBackgroundColor ?? UIColor.white
         self.frame = frontViewFrame ?? CGRect()
-        
-        if let frontSize = frontViewFrame {
-            imageView.widthAnchor.constraint(equalToConstant: frontSize.width * 0.5).isActive = true
-            imageView.heightAnchor.constraint(equalToConstant: frontSize.height * 0.5).isActive = true
-        } else {
-            imageView.widthAnchor.constraint(equalToConstant: 128).isActive = true
-            imageView.heightAnchor.constraint(equalToConstant: 128).isActive = true
-        }
-        
+        imageW = imageView.widthAnchor.constraint(equalToConstant: 128)
+        imageW.isActive = true
+        imageH = imageView.heightAnchor.constraint(equalToConstant: 128)
+        imageH.isActive = true
         self.addSubview(container)
         container.axis = .vertical
         container.distribution = .equalSpacing
@@ -203,5 +206,25 @@ open class KEmptyView: UIView {
             imageView.layer.borderWidth = bWidth
             imageView.layer.borderColor = bColor.cgColor
         }
+    }
+    
+    open func setImageSize(size: ImageSize) {
+        guard let frontSize = frontViewFrame else { return }
+        switch (size) {
+        case .small:
+            imageW.constant = 64
+            imageH.constant = 64
+        case .medium:
+            imageW.constant = 128
+            imageH.constant = 128
+        case .large:
+            imageW.constant = frontSize.width * 0.5
+            imageH.constant = frontSize.height * 0.5
+        }
+    }
+    
+    open func setImageSize(size: CGSize) {
+        imageW.constant = size.width
+        imageH.constant = size.height
     }
 }

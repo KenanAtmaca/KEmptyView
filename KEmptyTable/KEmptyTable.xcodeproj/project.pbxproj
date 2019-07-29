@@ -16,19 +16,6 @@
 		D579DEF69965BDC94C0BE321 /* Pods_KEmptyTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B45F1484F8DE2607099996 /* Pods_KEmptyTable.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		6EE9B97D22E9A871000A20B8 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		0E5B2D60DE29ADE504CB21B9 /* Pods-KEmptyTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KEmptyTable.release.xcconfig"; path = "Target Support Files/Pods-KEmptyTable/Pods-KEmptyTable.release.xcconfig"; sourceTree = "<group>"; };
 		27B45F1484F8DE2607099996 /* Pods_KEmptyTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KEmptyTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +102,6 @@
 				6ED1414A22E71E44001E58AC /* Sources */,
 				6ED1414B22E71E44001E58AC /* Frameworks */,
 				6ED1414C22E71E44001E58AC /* Resources */,
-				6EE9B97D22E9A871000A20B8 /* Embed Frameworks */,
 				54F4BD0B9E2287292A528ADB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (

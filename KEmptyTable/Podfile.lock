@@ -1,5 +1,5 @@
 PODS:
-  - KEmptyView (1.0.1)
+  - KEmptyView (1.0.2)
 
 DEPENDENCIES:
   - KEmptyView
@@ -9,7 +9,7 @@ SPEC REPOS:
     - KEmptyView
 
 SPEC CHECKSUMS:
-  KEmptyView: 8bacfd3e399ef55018425f5f34e4a387fe6e84b3
+  KEmptyView: a83f3f2f06a3152b8c5e951fbda289bcede8d03d
 
 PODFILE CHECKSUM: 07f8566d9e0ba4e362ee809ce8cc84f239e7ab94
 
