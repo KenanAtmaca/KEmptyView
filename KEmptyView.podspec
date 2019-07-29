@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "KEmptyView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Table & Collection Empty View"
   s.description  = <<-DESC
   iOS Customizable Table & Collection Empty reload view.
